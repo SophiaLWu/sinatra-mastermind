@@ -1,0 +1,29 @@
+body {
+  text-align: center;
+}
+
+.empty-peg, .mystery-peg {
+  background-color: black;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+}
+
+.feedback-peg {
+  background-color: black;
+  border-radius: 50%;
+  height: 6px;
+  width: 6px;
+}
+
+.pegs {
+  background-color: #865F3B;
+  border: 1px solid black;
+  border-spacing: 15px 10px;
+  margin: 0 auto;
+}
+
+.mystery-peg {
+  background-color: #EAAE75;
+  color: black;
+}
