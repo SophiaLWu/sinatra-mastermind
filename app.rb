@@ -8,6 +8,7 @@ require_relative "mastermind/player"
 require_relative "mastermind/computer"
 
 board = Mastermind::Board.new
+
 get "/" do
   erb :index, :locals => {:board => board}
 end
