@@ -1,9 +1,27 @@
 body {
+  background-color: #EFBEA8;
   text-align: center;
 }
 
-.empty-peg, .mystery-peg {
+/***************************/
+/********** Board **********/
+/***************************/
+
+.pegs {
+  background-color: #865F3B;
+  border: 3px solid black;
+  border-spacing: 15px 10px;
+  margin: 0 auto;
+}
+
+
+/***************************/
+/********** Pegs ***********/
+/***************************/
+
+.empty-peg, .guess-peg, .mystery-peg, .colors {
   background-color: black;
+  border: 1px solid black;
   border-radius: 50%;
   height: 25px;
   width: 25px;
@@ -16,14 +34,37 @@ body {
   width: 6px;
 }
 
-.pegs {
-  background-color: #865F3B;
-  border: 1px solid black;
-  border-spacing: 15px 10px;
-  margin: 0 auto;
-}
-
 .mystery-peg {
   background-color: #EAAE75;
   color: black;
 }
+
+.colors {
+  display: inline-block;
+  margin: 7px;
+}
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.purple {
+  background-color: purple;
+}
+

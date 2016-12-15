@@ -3,38 +3,45 @@
   <head>
     <title>Mastermind</title>
     <link rel="stylesheet" type="text/css" href="/styles.css">
+    <script type="text/javascript" src="/jquery-3.1.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
   </head>
   <body>
     <h1>Mastermind</h1>
-    <div class="board">
-      <div class="wood">
-      </div>
-      <table class="pegs">
-        <tr>
-          <td></td>
-          <% 4.times { %> <td class="mystery-peg">?</td> <% } %>
+    <table class="pegs">
+      <tr>
+        <td></td>
+        <% 4.times { %> <td class="mystery-peg">?</td> <% } %>
+      </tr>
+      <% row = 1 %>
+      <% until row == 13 %>
+        <tr class="peg-row">
+          <td> <%= 13 - row %> </td>
+          <% 4.times { %> <td class="empty-peg"></td> <% } %>
+          <td>
+            <table class="feedback">
+              <tr>
+                <td class="feedback-peg"></td>
+                <td class="feedback-peg"></td>
+              </tr>
+                <td class="feedback-peg"></td>
+                <td class="feedback-peg"></td>
+              <tr>
+              </tr>
+            </table>
+          </td>
+          <% row += 1 %>
         </tr>
-        <% row = 1 %>
-        <% until row == 13 %>
-          <tr class="peg-row">
-            <td> <%= 13 - row %> </td>
-            <% 4.times { %> <td class="empty-peg"></td> <% } %>
-            <td>
-              <table class="feedback">
-                <tr>
-                  <td class="feedback-peg"></td>
-                  <td class="feedback-peg"></td>
-                </tr>
-                  <td class="feedback-peg"></td>
-                  <td class="feedback-peg"></td>
-                <tr>
-                </tr>
-              </table>
-            </td>
-            <% row += 1 %>
-          </tr>
-        <% end %>
-      </div>
+      <% end %>
+    </table>
+    <div>
+      <div class="red color-chooser colors"></div>
+      <div class="orange color-chooser colors"></div>
+      <div class="yellow color-chooser colors"></div>
+      <div class="green color-chooser colors"></div>
+      <div class="blue color-chooser colors"></div>
+      <div class="purple color-chooser colors"></div>
     </div>
   </body>
 </html>
